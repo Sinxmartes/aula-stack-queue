@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using aula.pilha;
 using aula.fila;
+using aula.lista;
 
 namespace aula
 {
@@ -15,7 +16,8 @@ namespace aula
             PilhaRoots.Menu(initialStack); */
 
             //Pilha.Menu(new Stack<int>());
-            Fila.Menu(new Queue<int>());
+            //Fila.Menu(new Queue<int>());
+            Menu.main();
         }
     }
 }
