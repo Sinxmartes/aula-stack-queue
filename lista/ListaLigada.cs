@@ -32,5 +32,31 @@ namespace aula.lista
             };
             return _trem;
         }
+
+        public Vagao getVagaoById(int id)
+        {
+            foreach (Vagao item in getVagoes())
+            {
+                if (item.Id == id)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+
+        public List<Vagao> getVagoesByName(string name)
+        {
+            var listaVagoes = new List<Vagao>();
+
+            foreach (Vagao item in getVagoes())
+            {
+                if (item.Carga.ToUpper() == name.ToUpper())
+                {
+                    listaVagoes.Add(item);
+                }
+            }
+            return listaVagoes;
+        }
     }
 }
