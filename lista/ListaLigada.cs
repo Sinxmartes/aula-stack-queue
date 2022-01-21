@@ -26,6 +26,7 @@ namespace aula.lista
         public List<Vagao> getVagoes() {
             var _trem = new List<Vagao>();
             var tempVagao = Trem;
+
             while(tempVagao != null) {
                 _trem.Add(tempVagao);
                 tempVagao = tempVagao.VagaoAnterior;
@@ -57,6 +58,43 @@ namespace aula.lista
                 }
             }
             return listaVagoes;
+        }
+
+        public List<Vagao> getVagoesByPeso(int peso)
+        {
+            var listaVagoes = new List<Vagao>();
+
+            foreach (Vagao item in getVagoes())
+            {
+                if (item.Peso == peso)
+                {
+                    listaVagoes.Add(item);
+                }
+            }
+            return listaVagoes;
+        }
+
+
+        public void deleteById(int id)
+        {
+            var tempVagao = Trem;
+
+            if (Trem.Id == id)
+            {
+                Trem = Trem.VagaoAnterior;
+            }
+            else
+            {
+                while (tempVagao != null)
+                {
+                    if (id == tempVagao.VagaoAnterior.Id)
+                    {
+                        tempVagao.VagaoAnterior = tempVagao.VagaoAnterior.VagaoAnterior;
+                        return;
+                    }
+                    tempVagao = tempVagao.VagaoAnterior;
+                }
+            }
         }
     }
 }
