@@ -38,13 +38,10 @@ namespace aula.lista
             switch (Console.Read())
             {
                 case '1':
-
-                    Console.ReadLine();
-
                     var novoVagao = new Vagao();
 
+                    Console.ReadLine();
                     Console.WriteLine("Adicionando um novo vagão");
-
                     Console.WriteLine("Insira o Id do vagão");
 
                     novoVagao.Id = Convert.ToInt32(Console.ReadLine());
@@ -56,12 +53,10 @@ namespace aula.lista
                     Console.WriteLine("Insira o peso da Carga");
 
                     novoVagao.Peso = Convert.ToInt32(Console.ReadLine());
-
+                    
                     listaReferencia.InserirVagao(novoVagao);
-
                     break;
                 case '2':
-
                     var ultimoVagao = listaReferencia.getUltimoVagao();
 
                     Console.WriteLine("Último vagão");
@@ -69,7 +64,6 @@ namespace aula.lista
                     Console.WriteLine($"Peso: { ultimoVagao.Peso }");
                     break;
                 case '3':
-
                     foreach (Vagao item in listaReferencia.getVagoes())
                     {
                         Console.WriteLine("ID {0}", item.Id);
@@ -78,11 +72,9 @@ namespace aula.lista
                     }
                     break;
                 case '4':
-
                     Console.WriteLine("Insira o Id do vagão");
 
                     var id = Convert.ToInt32(Console.ReadLine());
-
                     var vagao = listaReferencia.getVagaoById(id);
 
                     if (vagao is null)
@@ -94,16 +86,12 @@ namespace aula.lista
                     Console.WriteLine("ID {0}", vagao.Id);
                     Console.WriteLine("Carga {0}", vagao.Carga);
                     Console.WriteLine("Peso {0}", vagao.Peso);
-
                     break;
                 case '5':
-
                     Console.WriteLine("Insira o nome da carga");
-
                     Console.ReadLine();
 
                     var name = Console.ReadLine();
-
                     var listaVagoes = listaReferencia.getVagoesByName(name);
 
                     if (!listaVagoes.Any())
@@ -120,13 +108,9 @@ namespace aula.lista
                         Console.WriteLine("Carga {0}", item.Carga);
                         Console.WriteLine("Peso {0}", item.Peso);
                     }
-
                     break;
-
                 case '6':
-
                     Console.WriteLine("Insira o peso");
-
                     Console.ReadLine();
 
                     var peso = Convert.ToInt32(Console.ReadLine());
@@ -147,17 +131,12 @@ namespace aula.lista
                         Console.WriteLine("Carga {0}", item.Carga);
                         Console.WriteLine("Peso {0}", item.Peso);
                     }
-
                     break;
-
                 case '7':
-
                     Console.WriteLine("Insira o Id do vagão a ser editado");
-
                     Console.ReadLine();
 
                     var idEdit = Convert.ToInt32(Console.ReadLine());
-
                     var vagaoEdit = listaReferencia.getVagaoById(idEdit);
 
                     if (vagaoEdit == null)
@@ -174,21 +153,15 @@ namespace aula.lista
                     Console.WriteLine("Insira o novo peso da Carga");
 
                     vagaoEdit.Peso = Convert.ToInt32(Console.ReadLine());
-
                     break;
-
                 case '8':
-
                     Console.WriteLine("Insira o Id do vagão a ser deletado");
-
                     Console.ReadLine();
 
                     var idDelete = Convert.ToInt32(Console.ReadLine());
 
                     listaReferencia.deleteById(idDelete);
-
                     break;
-
                 case '0':
                     Environment.Exit(0);
                     break;
@@ -196,7 +169,6 @@ namespace aula.lista
                     Console.WriteLine("Opção invalida, tente novamente...");
                     break;
             }
-
             main();
         }
     }
