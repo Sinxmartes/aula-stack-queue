@@ -4,6 +4,8 @@ using aula.pilha;
 using aula.fila;
 using aula.lista;
 using aula.examples;
+using System.Threading;
+using System.Threading.Tasks;
 
 
 namespace aula
@@ -21,9 +23,23 @@ namespace aula
             //Fila.Menu(new Queue<int>());
             //Menu.main();
 
-            sort.Iniciar();
+            //sort.Iniciar();
             //search.Iniciar();
+            
+            //Sincrono
+            paralelismo.Processo();
+            paralelismo.Paralelo();
 
+            //Paralelo - 1
+            /* Parallel.Invoke(
+                new Action(paralelismo.Processo),
+                new Action(paralelismo.Paralelo)
+            ); */
+            //Paralelo - 2
+            /* Parallel.Invoke(
+                () => { paralelismo.Processo(); },
+                () => { paralelismo.Paralelo(); }
+            ); */
         }
     }
 }
