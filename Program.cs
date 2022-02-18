@@ -27,8 +27,8 @@ namespace aula
             //search.Iniciar();
             
             //Sincrono
-            paralelismo.Processo();
-            paralelismo.Paralelo();
+            //paralelismo.Processo();
+            //paralelismo.Paralelo();
 
             //Paralelo - 1
             /* Parallel.Invoke(
@@ -40,6 +40,9 @@ namespace aula
                 () => { paralelismo.Processo(); },
                 () => { paralelismo.Paralelo(); }
             ); */
+            
+            asyncAwait _asyncAwait = new asyncAwait();
+            _asyncAwait.Executar().Wait();
         }
     }
 }
