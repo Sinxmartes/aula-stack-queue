@@ -15,7 +15,7 @@ namespace aula.examples
             string contents = await client.GetStringAsync("https://economia.awesomeapi.com.br/last/USD-BRL");
             Moeda moeda = JsonSerializer.Deserialize<Moeda>(contents);
             double valorFinal = Convert.ToDouble(moeda.USDBRL.high.Replace(".", ",")) * qtde;
-            Console.WriteLine("O valor convertido em reais é: " + valorFinal);            
+            Console.WriteLine("O valor convertido em reais é: " + valorFinal);
         }
 
         public void ExecutadoIndependente() {
