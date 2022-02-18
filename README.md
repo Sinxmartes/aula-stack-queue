@@ -21,3 +21,20 @@ Observações:
     2º Potenciação;
     3º Multiplicações e Divisões; (da esquerda para a direita)
     4º Somas e Subtrações. (da esquerda para a direita)
+
+# Projeto Conversão Monetária"
+
+1º O usuário digita o valor em reais que deseja (1 a 100 reais)
+2º Escolhe converter para Dolar ou Rublo Russo 
+3º 
+    Se ele escolher Dolar
+        - Primeiro pegar o valor de Real e Rublo Russo
+        - Depois Rublo Russo e Dolar
+        - Após isso, calcular a conversão do Real para o Dolar com os valores que retornou
+        - (Test) Verificar se o valor INTEIRO está batendo através da conversão direta (não usar esse valor para o usuário)
+    Se ele escolher Rublo Russo
+        - Primeiro pegar o valor de Real e Dolar
+        - Depois Dolar para Rublo Russo
+        - Após isso, calcular a conversão do Real para o Rublo Russo com os valores que retornou
+        - (Test) Verificar se o valor está batendo através da conversão direta (não usar esse valor para o usuário)
+4º Exibir o resultado para o usuário
